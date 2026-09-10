@@ -19,3 +19,12 @@ print(top_matches[["HomeTeam", "AwayTeam", "FTHG", "FTAG", "TotalGoals"]].head(1
 #match results
 print(data["FTR"].value_counts())
 result = data["FTR"].value_counts()
+
+
+#plot
+plt.figure(figsize=(7,5))
+result.plot(kind='bar')
+plt.title("Premier League Match Results")
+plt.xlabel("Results")
+plt.ylabel("Number of Matches")
+plt.show()
